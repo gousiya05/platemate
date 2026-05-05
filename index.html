@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plate Mate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #f9fafb; /* Light gray background for content */
+        }
+        
+        /* Animation for page load */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-in-out forwards;
+        }
+
+        /* Custom styles for select dropdown options for better readability */
+        option {
+            background: white !important;
+            color: #1f2937 !important; /* Tailwind's gray-800 for dark text */
+        }
+
+        /* Hover effect for options (note: support varies by browser) */
+        option:hover {
+            background: #f3f4f6 !important; /* Tailwind's gray-100 for hover */
+        }
+
+        /* Ken Burns Effect Animations */
+        @keyframes kenburns-1 {
+          0% {
+            transform: scale(1) translate(0, 0);
+            transform-origin: 50% 50%;
+          }
+          100% {
+            transform: scale(1.15) translate(-2%, -2%);
+            transform-origin: 50% 50%;
+          }
+        }
+
+        @keyframes kenburns-2 {
+          0% {
+            transform: scale(1) translate(0, 0);
+            transform-origin: 50% 50%;
+          }
+          100% {
+            transform: scale(1.15) translate(2%, 2%);
+            transform-origin: 50% 50%;
+          }
+        }
+
+        .animate-kenburns-1 {
+            animation: kenburns-1 8s ease-out forwards;
+        }
+
+        .animate-kenburns-2 {
+            animation: kenburns-2 8s ease-out forwards;
+        }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "@mediapipe/tasks-vision": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

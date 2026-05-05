@@ -1,0 +1,9 @@
+{
+  "name": "Plate Mate",
+  "description": "Turn leftovers into love! Discover and share creative recipes to build a waste-free kitchen.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": "",
+  "majorCapabilities": []
+}
